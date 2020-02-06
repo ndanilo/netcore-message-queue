@@ -26,9 +26,6 @@ namespace Sender
                     Console.WriteLine("sent");
                 }
             }
-
-            Console.WriteLine("Finished!");
-            Console.ReadKey();
         }
     }
 }

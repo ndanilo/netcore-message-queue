@@ -29,9 +29,6 @@ namespace Receiver
                 while (true)
                     channel.BasicConsume(queue: "sample", autoAck: true, consumer: consumer);
             }
-
-            Console.WriteLine("Finished!");
-            Console.ReadKey();
         }
     }
 }
