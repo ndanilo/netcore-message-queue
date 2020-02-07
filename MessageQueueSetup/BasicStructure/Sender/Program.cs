@@ -15,7 +15,6 @@ namespace Sender
             {
                 channel.QueueDeclare(queue: "sample", durable: false, exclusive: false, autoDelete: false, arguments: null);
 
-
                 while (true)
                 {
                     Console.Write("message: ");
