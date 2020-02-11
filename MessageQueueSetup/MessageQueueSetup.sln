@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageQueueSetup", "MessageQueueSetup\MessageQueueSetup.csproj", "{7742FDC2-DE1B-4DED-ACA0-1A574C832546}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MessageQueueSetup", "MessageQueueSetup\MessageQueueSetup.csproj", "{7742FDC2-DE1B-4DED-ACA0-1A574C832546}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasicStructure", "BasicStructure", "{09A95E7F-8B90-4C42-9C17-BBD22C108210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sender", "BasicStructure\Sender\Sender.csproj", "{B98367A9-FE53-475E-BB16-1C746B186A51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sender", "BasicStructure\Sender\Sender.csproj", "{B98367A9-FE53-475E-BB16-1C746B186A51}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Receiver", "BasicStructure\Receiver\Receiver.csproj", "{2A92794E-3E42-48C6-8888-32B8159D20D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Receiver", "BasicStructure\Receiver\Receiver.csproj", "{2A92794E-3E42-48C6-8888-32B8159D20D1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "BasicStructure\Models\Models.csproj", "{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{2A92794E-3E42-48C6-8888-32B8159D20D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A92794E-3E42-48C6-8888-32B8159D20D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A92794E-3E42-48C6-8888-32B8159D20D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B98367A9-FE53-475E-BB16-1C746B186A51} = {09A95E7F-8B90-4C42-9C17-BBD22C108210}
 		{2A92794E-3E42-48C6-8888-32B8159D20D1} = {09A95E7F-8B90-4C42-9C17-BBD22C108210}
+		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A} = {09A95E7F-8B90-4C42-9C17-BBD22C108210}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C9176A1-E837-4E10-8F96-B0498A8AA683}
