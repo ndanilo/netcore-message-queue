@@ -2,9 +2,11 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
+using CrossCutting.Utils;
 using Models.DTO;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using RabbitMQ.Client.Framing.Impl;
 
 namespace Receiver
 {
@@ -18,7 +20,9 @@ namespace Receiver
             using(var connection = factory.CreateConnection())
             using (var channel = connection.CreateModel())
             {
-                channel.QueueDeclare(queue: "sample", durable: true, exclusive: false, autoDelete: false, arguments: null);
+                channel.ExchangeDeclare("logs", ExchangeType.Fanout);
+                //channel.QueueDeclare(queue: "sample", durable: true, exclusive: false, autoDelete: false, arguments: null);
+
                 channel.BasicQos(0, 1, false);
 
                 var consumer = new EventingBasicConsumer(channel);
@@ -26,31 +30,18 @@ namespace Receiver
                 consumer.Received += (sender, e) =>
                 {
                     var body = e.Body;
-                    var basicMessageTransfer = GetObject(body);
+                    var basicMessageTransfer = body.ToObject<BasicMessageTransfer>();
+
                     //var basicMessageTransfer = Encoding.UTF8.GetString(body);
                     Console.WriteLine("[x] Received: {0}", basicMessageTransfer);
                 };
 
+                var queueName = channel.QueueDeclare().QueueName;
+                channel.QueueBind(queue: queueName, exchange: "logs", routingKey: "", null);
+
                 while (true)
-                    channel.BasicConsume(queue: "sample", autoAck: true, consumer: consumer);
+                    channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
             }
-        }
-
-        static byte[] GetByteArray(object obj)
-        {
-            var bf = new BinaryFormatter();
-            using (var ms = new MemoryStream())
-            {
-                bf.Serialize(ms, obj);
-                return ms.ToArray();
-            }
-        }
-
-        static BasicMessageTransfer GetObject(byte[] obj)
-        {
-            var bf = new BinaryFormatter();
-            using (var ms = new MemoryStream(obj))
-                return (BasicMessageTransfer)bf.Deserialize(ms); ;
         }
     }
 }

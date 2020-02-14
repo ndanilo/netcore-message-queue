@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sender", "BasicStructure\Se
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Receiver", "BasicStructure\Receiver\Receiver.csproj", "{2A92794E-3E42-48C6-8888-32B8159D20D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "BasicStructure\Models\Models.csproj", "{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "BasicStructure\Models\Models.csproj", "{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "BasicStructure\CrossCutting\CrossCutting.csproj", "{CD398E99-98FE-45F4-87DD-92FCAB942A26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD398E99-98FE-45F4-87DD-92FCAB942A26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD398E99-98FE-45F4-87DD-92FCAB942A26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD398E99-98FE-45F4-87DD-92FCAB942A26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD398E99-98FE-45F4-87DD-92FCAB942A26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{B98367A9-FE53-475E-BB16-1C746B186A51} = {09A95E7F-8B90-4C42-9C17-BBD22C108210}
 		{2A92794E-3E42-48C6-8888-32B8159D20D1} = {09A95E7F-8B90-4C42-9C17-BBD22C108210}
 		{C59C4320-FCC7-4D3C-86DB-1E075010BC8A} = {09A95E7F-8B90-4C42-9C17-BBD22C108210}
+		{CD398E99-98FE-45F4-87DD-92FCAB942A26} = {09A95E7F-8B90-4C42-9C17-BBD22C108210}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C9176A1-E837-4E10-8F96-B0498A8AA683}
