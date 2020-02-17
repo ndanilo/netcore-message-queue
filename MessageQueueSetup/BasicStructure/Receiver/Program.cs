@@ -39,8 +39,8 @@ namespace Receiver
                 var queueName = channel.QueueDeclare().QueueName;
                 channel.QueueBind(queue: queueName, exchange: "logs", routingKey: "", null);
 
-                while (true)
-                    channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
+                channel.BasicConsume(queue: queueName, autoAck: true, consumer: consumer);
+                Console.ReadKey();
             }
         }
     }

@@ -27,7 +27,7 @@ namespace Sender
 
                 var properties = channel.CreateBasicProperties();
                 properties.Persistent = true;
-
+                
                 while (true)
                 {
                     Console.Write("message: ");
